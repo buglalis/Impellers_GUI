@@ -1,0 +1,57 @@
+<MainWidget>:
+    hight: 1920
+    width: 1080
+    background_color: 0, 0, 0, 0
+    # size: hight, width
+
+    canvas.before:
+        Color:
+            rgba: root.background_color
+        Rectangle:
+            size: (self.size)
+            pos: self.pos
+
+    # GridLayout:
+    #     rows: 2
+    #     # size_hint: 1, None
+    #     # height: 44 * 5
+    #     pos:(0,400)
+
+    GridLayout:
+        rows: 3
+
+        Label:
+            text: 'Alpha'
+        Slider:
+            # value: root.alpha
+            # on_value: root.alpha = float(args[1])
+            min: 0.
+            max: 1.
+        Label:
+            text: 'Alpha Control Line'
+        Slider:
+            value: 0.1
+            # on_value: 0.1
+            min: 0.
+            max: 1.
+        Label:
+            text: 'Width'
+        Slider:
+            # value: root.alpha_controlline
+            # on_value: root.alpha_controlline = float(args[1])
+            min: 0.
+            max: 1.
+        # Label:
+        #     font_size: 30
+        #     text: 'Поздороваться'
+        #     # size_hint: (.5, .25)
+        #     # pos:(50,20)
+        #     color: (1, .4, .4)
+        #     background_color: 0, 0, 0, 0
+        #     # ellipsis_options: {'color':(1,0.5,0.5,1),'underline':True}
+
+        #     # on_press: root.say_hello()
+        # Label:
+        #         text: 'Width'
+        # Label:
+        #         text: 'Width'
